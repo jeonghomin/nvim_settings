@@ -1,0 +1,5 @@
+[user]
+	email = wjdghakswp0866@gmail.com
+	name = jeonghomin
+[credential]
+	helper = "!f() { printf \"protocol=https\\nhost=github.com\\n\"; }; f"

@@ -1,0 +1,5 @@
+# 이 파일을 ~/.bashrc.local 로 복사한 뒤 값을 채우세요.
+# cp bashrc.local.example ~/.bashrc.local
+
+# export LANGSMITH_API_KEY=""
+# export TAVILY_API_KEY=""

@@ -1,0 +1,10 @@
+Host 4070
+        Hostname 192.168.10.128
+        Port 2232
+Host a5000
+        Hostname 192.168.10.174
+        Port 22
+Host 3080
+        Hostname 192.168.10.173
+        Port 2232
+

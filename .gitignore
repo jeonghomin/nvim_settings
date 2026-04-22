@@ -1,0 +1,16 @@
+# 민감한 파일
+*.pem
+*.key
+id_*
+.netrc
+bashrc.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 에디터
+*.swp
+*.swo
+*~
+.backup
