@@ -21,15 +21,12 @@ cd ~/dotfiles
 ./install.sh
 ```
 
-Neovim을 열면 Lazy.nvim이 플러그인을 자동으로 설치합니다.
+Neovim을 열면 Lazy.nvim이 플러그인을 자동으로 설치됨
 
-### API 키 (LangSmith, Tavily 등)
-
-`bashrc`에는 비밀번호가 들어가지 않습니다. 로컬에서만 `~/.bashrc.local`을 만들고 키를 넣으세요. 예시는 `bashrc.local.example` 참고.
 
 ## Neovim 플러그인
 
 - telescope, nvim-tree, bufferline, lualine
-- nvim-cmp (자동완성), LSP, treesitter
+- nvim-cmp, LSP, treesitter
 - copilot, lazygit, floatterm, nvim-dap
-- onedark (테마)
+- onedark
