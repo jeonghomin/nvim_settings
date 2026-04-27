@@ -14,3 +14,6 @@ Thumbs.db
 *.swo
 *~
 .backup
+
+# nvim 백업 폴더 안의 중첩 git (rsync 시 제외)
+nvim/config-files/.git/
