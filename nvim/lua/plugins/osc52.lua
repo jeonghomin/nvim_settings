@@ -8,6 +8,8 @@ return {
       print("OSC52 visual copy")
     end, { desc = "OSC52 copy visual" })
 
+    vim.keymap.set("v", "<leader>Y", "\"zy<Cmd>lua local t = vim.fn.getreg('z'); t = t:gsub('\\n', ' '):gsub('%s+', ' '):gsub('^%s*', ''):gsub('%s*$', ''); require('osc52').copy(t); print('OSC52 visual copy (no newline)')<CR>", { desc = "OSC52 copy visual (no newline)" })
+
     vim.keymap.set("n", "<leader>yy", function()
       local line = vim.api.nvim_get_current_line()
       osc52.copy(line)
