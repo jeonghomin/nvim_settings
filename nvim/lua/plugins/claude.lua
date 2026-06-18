@@ -2,7 +2,14 @@ return {
   "coder/claudecode.nvim",
   dependencies = { "folke/snacks.nvim" },
   opts = {
-    terminal_cmd = "/home/disk1/mjh/.local/bin/claude", 
+    terminal_cmd = "/home/disk1/mjh/.local/bin/claude",
+    diff_opts = {
+      -- open diff in a NEW TAB (full screen) instead of a split in the current
+      -- tab — fixes the half-width / cut-off diff window.
+      open_in_current_tab = false,
+      vertical_split = true,
+      auto_close_on_accept = true,
+    },
   },
   keys = {
     { "<leader>a", nil, desc = "AI/Claude Code" },
