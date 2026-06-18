@@ -116,43 +116,34 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin
-export LD_LIBRARY_PATH=:/usr/local/cuda/lib64
-export LD_INCLUDE_PATH=:/usr/local/cuda/include
-# export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/deepinsight-a6000/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/deepinsight-a6000/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/deepinsight-a6000/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/anaconda3/bin:$PATH"
+        export PATH="/home/deepinsight-a6000/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# API 키는 Git에 올리지 마세요. ~/.bashrc.local 에서 export 하거나 아래 주석을 해제하세요.
-# export LANGSMITH_API_KEY="your-key-here"
-[ -f "$HOME/.bashrc.local" ] && . "$HOME/.bashrc.local"
-
-# added by pipx (https://github.com/pipxproject/pipx)
-export PATH="/home/mjh/.local/bin:$PATH"
+# CUDA 환경 변수 설정
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # alias setting
+export PATH="$PATH:/home/disk1/mjh/nvim-linux64/bin"
 alias nv="nvim"
 alias ncf="nvim ~/.config/nvim/init.lua"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-# export TAVILY_API_KEY="your-key-here"
-export LANGSMITH_TRACING=false
-export FASTAPI_BASE_URL=http://192.168.10.174:6600
+
+# 로컬 및 npm 바이너리 경로 추가
+export PATH="$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+alias blender='~/blender-4.3.2-linux-x64/blender'
